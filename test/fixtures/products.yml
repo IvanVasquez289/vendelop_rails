@@ -1,11 +1,11 @@
 # Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
-one:
-  title: MyString
-  description: MyText
-  price: 1
+ps4:
+  title: ps4 chipeada
+  description: en muy buen estado
+  price: 289
 
-two:
-  title: MyString
-  description: MyText
-  price: 1
+iphone15:
+  title: no funciona la pantalla
+  description: Muy buen estado
+  price: 500
