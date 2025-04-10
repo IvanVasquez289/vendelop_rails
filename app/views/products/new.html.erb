@@ -1,5 +1,10 @@
 <h1>Nuevo Producto</h1>
 <%= form_for @product do |f| %>
+    <% @product.errors.full_messages.each do |error|%>
+        <div>
+            <%= error %>
+        </div>
+    <%end %>
     <div>
         <%= f.label :title, 'Titulo' %>
         <%= f.text_field :title %>
