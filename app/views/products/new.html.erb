@@ -1,21 +1,2 @@
-<h1>Nuevo Producto</h1>
-<%= form_for @product do |f| %>
-    <% @product.errors.full_messages.each do |error|%>
-        <div>
-            <%= error %>
-        </div>
-    <%end %>
-    <div>
-        <%= f.label :title, 'Titulo' %>
-        <%= f.text_field :title %>
-    </div>
-    <div>
-        <%= f.label :description, 'Descripción' %>
-        <%= f.text_area :description %>
-    </div>
-    <div>
-        <%= f.label :price, 'Precio' %>
-        <%= f.number_field :price %>
-    </div>
-    <%= f.submit %>
-<% end %>
+<h2>Nuevo Producto</h2>
+<%= render 'form' %>
