@@ -28,6 +28,7 @@ class ProductsControllerTest < ActionDispatch::IntegrationTest
       }
     }
     assert_redirected_to products_path
+    assert_equal "El producto se ha creado correctamente", flash[:notice]
   end
 
   test "does not allow to create a new product with empty fields" do
