@@ -47,4 +47,27 @@ class ProductsControllerTest < ActionDispatch::IntegrationTest
     assert_response :success
     assert_select "form"
   end
+
+  test "update a product" do
+    patch product_path(products(:ps4)), params: {
+      product: {
+        title: "Canasta de madera",
+        description: "Muy buena calidad",
+        price: 100
+      }
+    }
+    assert_redirected_to products_path
+    assert_equal "El producto se ha actualizado correctamente", flash[:notice]
+  end
+
+  test "does not allow to update a product with empty fields" do
+    patch product_path(products(:ps4)), params: {
+      product: {
+        title: "",
+        description: "Le falla la pantalla",
+        price: 45
+      }
+    }
+    assert_response :unprocessable_entity
+  end
 end
