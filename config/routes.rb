@@ -18,4 +18,5 @@ Rails.application.routes.draw do
 
   post "/products", to: "products#create"
   patch "/products/:id", to: "products#update"
+  delete "/products/:id", to: "products#destroy"
 end
