@@ -2,7 +2,7 @@
 <p class="description"><%= @product.description %></p>
 <p class="price"><%= @product.price %></p>
 <%= link_to 'Editar producto', edit_product_path(@product) %>
-<%= button_to 'Eliminar producto',product_path(@product), method: :delete %>
+<%= button_to 'Eliminar producto',product_path(@product), method: :delete%>
 <%= @product.photo.attached? %>
 <% if @product.photo.attached? %>
     <%= image_tag @product.photo , width:500 %>

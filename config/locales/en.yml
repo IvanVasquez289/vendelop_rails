@@ -28,4 +28,41 @@
 #       enabled: "ON"
 
 en:
-  hello: "Hello world"
+  activerecord:
+    models:
+      product: "Product"
+    attributes:   
+      product:
+        title: "Title"
+        description: "Description"
+        price: "Price"
+        photo: "Photo"
+    errors:
+      models:
+        product:
+          attributes:
+            title:
+              blank: "The title can't be blank"
+            description:
+              blank: "The description can't be blank"
+            price:
+              blank: "The price can't be blank"
+              not_a_number: "The price must be a number"
+            photo:
+              blank: "The photo can't be blank"
+  products:
+    edit:
+      title: "Edit product"
+    new:
+      title: "New product"
+    show:
+      title: "Show product"
+    index:
+      title: "Product list"
+    create:
+      created: "The product has been created successfully"
+    update:
+      updated: "The product has been updated successfully"
+    destroy:
+      destroyed: "The product has been deleted successfully"
+
