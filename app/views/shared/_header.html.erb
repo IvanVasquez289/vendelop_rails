@@ -1,4 +1,11 @@
 <%= link_to products_path  do %>
     <h1>Vendelop</h1>
 <% end %>
-<%= link_to 'Agregar Producto', new_product_path %>
+<p><%= link_to 'Agregar Producto', new_product_path %></p>
+
+<% if controller_name != 'categories' %>
+  <p><%= link_to 'Categorias', categories_path %></p>
+<% end %>
+<% if controller_name != 'products' %>
+  <p><%= link_to 'Productos', products_path %></p>
+<% end %>
